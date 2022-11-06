@@ -1,12 +1,16 @@
+import Announcement from "../components/Announcement";
 import Navbar from "../components/Navbar";
+import Slider from "../components/Slider";
 
-const Home = () => {
+ const Home = () => {
     
-    return (  
-        <>
-           <Navbar/>
-        </>
-     );
+   return (  
+      <>
+         <Announcement/>
+         <Navbar/>
+         <Slider />
+      </>
+   );
 }
  
 export default Home ;

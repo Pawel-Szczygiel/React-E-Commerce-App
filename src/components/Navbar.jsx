@@ -8,7 +8,7 @@ import Badge from '@mui/material/Badge';
 const Navbar = () => {
 
     const Container = styled.div`
-        height: 60px;
+        min-height: 60px;
    
     `;
 
@@ -17,7 +17,7 @@ const Navbar = () => {
           justify-content: space-between;
           /* align-items: stretch; */
           padding: 10px 20px;
-
+          
     `;
 
 
@@ -25,16 +25,18 @@ const Navbar = () => {
         flex-grow: 1;
         display: flex;
         align-items: center;
-        /* background-color: cyan; */
+      
         `;
     
     const Language = styled.span`
         font-style: 14px;
         cursor: pointer;  
+        user-select: none;
         `;
 
     const SearchContainer = styled.div`
         display: flex;
+        justify-content: center;
         align-items: center;
         border: .7px solid lightgrey;
         margin-left: 25px;
@@ -49,20 +51,21 @@ const Navbar = () => {
 
     const Center = styled.div`
             flex-grow: 1;
-        
-    
+            text-align: center;
             `;
 
     const Logo = styled.h1`
             font-weight: bold;
-            `;
+            user-select: none;
+            margin: 0;
+        `;
 
     const Right = styled.div`
             flex-grow: 1;
             display: flex;
             justify-content: end;
             align-items: center;
-        
+            user-select: none;
         `;
 
     const MenuItem = styled.div`
