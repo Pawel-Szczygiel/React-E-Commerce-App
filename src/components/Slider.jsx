@@ -3,7 +3,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import styled from 'styled-components';
 import{ sliderItems } from '../data';
 
-
+import './style.css';
 
 const Container = styled.div`
     position: relative;
@@ -35,6 +35,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     display: flex;
     height: 100%;
+    transition: all 1.5s ease;
     transform:translateX(${props => props.slideIndex * -100}vw);
 `;
 
@@ -98,10 +99,10 @@ const Slider = () => {
         
         switch (direction) {
             case 'left':
-                setslideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+                setslideIndex(slideIndex > 0 ? slideIndex - 1 : sliderItems.length -1);
                 break;
             case 'right':
-                setslideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+                setslideIndex(slideIndex < sliderItems.length -1 ? slideIndex + 1 : 0);
                 break;    
             default:
                 break;
@@ -117,7 +118,7 @@ const Slider = () => {
             <Arrow direction='left' onClick={() => handleClick('left')}>
                 <ArrowLeftOutlined style={{fontSize:'40px'}}/>
             </Arrow>
-            <Wrapper slideIndex={slideIndex} className='wrapper'>
+            <Wrapper slideIndex={slideIndex} >
                 {sliderItems.map(item => {
                     const {title, desc, img, bg, id} = item;
                     return  ( 
