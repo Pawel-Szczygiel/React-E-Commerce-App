@@ -3,7 +3,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import styled from 'styled-components';
 import{ sliderItems } from '../data';
 
-import './style.css';
+
 
 const Container = styled.div`
     position: relative;
@@ -87,6 +87,12 @@ const Button = styled.button`
     background: transparent;
     cursor: pointer;
     box-shadow: 1px 3px 6px rgba(0,0,0,.5);
+    transition: all .5s ease;
+
+    &:hover {
+    transform: translateY(-7px);
+    box-shadow: 1px 10px 12px 2px rgba(0,0,0,.2);
+}
 `;
 
 
@@ -109,7 +115,7 @@ const Slider = () => {
         }
     };
 
-    useEffect(() =>  console.log(slideIndex), [slideIndex]);
+  
 
 
     return ( 

@@ -33,14 +33,21 @@ const Title = styled.h1`
 `;
 const Button = styled.button`
     text-transform: uppercase;
-    background-color: transparent;
+    background-color: rgba(0,0,0, .3);
     padding: 5px 10px;
     color: white;
     letter-spacing: 1px;
     border-radius: 5px;
-
+    border: 2px solid white;
+    transition: all .5s ease;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+
+    &:hover {
+        transform: translateY(-7px);
+        color: #f5fbfd;
+    }
 `;
 
 

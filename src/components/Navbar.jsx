@@ -57,6 +57,7 @@ const Navbar = () => {
     const Logo = styled.h1`
             font-weight: bold;
             user-select: none;
+            letter-spacing: 2px;
             margin: 0;
         `;
 
