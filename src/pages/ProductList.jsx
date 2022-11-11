@@ -11,12 +11,14 @@ const Container = styled.div`
 
 const Title = styled.h1`
     text-transform: capitalize;
+    border-bottom: 3px solid #c3c5c5;
+    width: 130px;
     margin: 20px;
 `;
 
 const FilterContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
 `;
 
