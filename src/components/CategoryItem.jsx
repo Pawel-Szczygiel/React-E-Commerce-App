@@ -1,66 +1,57 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
-    flex-grow: 1;
-    margin: 3px;
-    height: 70vh;
-    position: relative;
+  flex: 1;
+  margin: 3px;
+  height: 70vh;
+  position: relative;
 `;
+
 const Image = styled.img`
-    width: 100%;
-    height: 70vh;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  ${mobile({ height: "20vh" })}
 
 `;
+
 const Info = styled.div`
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
-    background: rgba(0,0,0, 0.07);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
+
 const Title = styled.h1`
-    color: #eee;
-    letter-spacing: 1px;
-    user-select: none;
+    color:white;
+    margin-bottom: 20px;
 `;
+
 const Button = styled.button`
-    text-transform: uppercase;
-    background-color: rgba(0,0,0, .3);
-    padding: 5px 10px;
-    color: white;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    border: 2px solid white;
-    transition: all .5s ease;
-    font-size: 16px;
-    font-weight: 600;
+    border:none;
+    padding: 10px;
+    background-color: white;
+    color:gray;
     cursor: pointer;
-
-    &:hover {
-        transform: translateY(-7px);
-        color: #f5fbfd;
-    }
+    font-weight: 600;
 `;
 
+const CategoryItem = ({ item }) => {
+  return (
+    <Container>
+      <Image src={item.img} />
+      <Info>
+        <Title>{item.title}</Title>
+        <Button>SHOP NOW</Button>
+      </Info>
+    </Container>
+  );
+};
 
-const CategoryItem = ({title, img}) => {
-    return ( 
-        <Container>
-            <Image src={img}/>
-            <Info>
-                <Title>{title}</Title>
-                <Button>shop now</Button>
-            </Info>
-        </Container>
-     );
-}
- 
 export default CategoryItem;

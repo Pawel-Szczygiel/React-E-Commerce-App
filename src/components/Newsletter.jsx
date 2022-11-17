@@ -1,70 +1,64 @@
-import { Send } from '@material-ui/icons';
-import styled from 'styled-components';
+import { Send } from "@material-ui/icons";
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
-
-const Conntainer = styled.div`
-    height: 60vh;
-    background-color: #fcf5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+const Container = styled.div`
+  height: 60vh;
+  background-color: #fcf5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 const Title = styled.h1`
-    font-size: 70px;
-    margin: 20px;
+  font-size: 70px;
+  margin-bottom: 20px;
 `;
 
-const Description = styled.div`
-    font-size: 24px;
-    font-weight: 300;
-    margin-bottom: 20px;
+const Desc = styled.div`
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  ${mobile({ textAlign: "center" })}
+
 `;
 
-const InputConntainer = styled.div`
-    width: 50%;
-    height: 40px;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid lightgray;
+const InputContainer = styled.div`
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  ${mobile({ width: "80%" })}
 `;
 
 const Input = styled.input`
-    padding: 0 20px;
-    flex-grow: 8;
-    letter-spacing: 1px;
-    border: none;
-    outline: none;
+  border: none;
+  flex: 8;
+  padding-left: 20px;
 `;
 
 const Button = styled.button`
-    flex-grow: 1;
-    border:none;
-    background-color: teal;
-    color:white;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-
-    &:hover {
-        background-color: #055858;
-    }
+  flex: 1;
+  border: none;
+  background-color: teal;
+  color: white;
 `;
 
-
 const Newsletter = () => {
-    
-    return ( 
-        <Conntainer>
-            <Title>Newsletter</Title>
-            <Description>Get timely updates from your favorite products.</Description>
-            <InputConntainer>
-                <Input placeholder='Your email..'/>
-                <Button>
-                    <Send/>
-                </Button>
-            </InputConntainer>
-        </Conntainer> );
-}
- 
+  return (
+    <Container>
+      <Title>Newsletter</Title>
+      <Desc>Get timely updates from your favorite products.</Desc>
+      <InputContainer>
+        <Input placeholder="Your email" />
+        <Button>
+          <Send />
+        </Button>
+      </InputContainer>
+    </Container>
+  );
+};
+
 export default Newsletter;

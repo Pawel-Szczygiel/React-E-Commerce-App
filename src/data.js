@@ -1,28 +1,28 @@
 export const sliderItems = [
     {
-        id:1,
-        img: "https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_960_720.jpg",
-        title: "summer sale",
-        desc: "don't comparise on style! get flat 30% off for new arrives.",
-        bg: "f5fafd"
+      id: 1,
+      img: "https://i.ibb.co/XsdmR2c/1.png",
+      title: "SUMMER SALE",
+      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      bg: "f5fafd",
     },
     {
-        id:2,
-        img: "https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_960_720.jpg",
-        title: "loungewer love",
-        desc: "don't comparise on style! get flat 30% off for new arrives.",
-        bg: "fcf1ed"
+      id: 2,
+      img: "https://i.ibb.co/DG69bQ4/2.png",
+      title: "AUTUMN COLLECTION",
+      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      bg: "fcf1ed",
     },
     {
-        id:3,
-        img: "https://cdn.pixabay.com/photo/2017/12/26/09/15/woman-3040029_960_720.jpg",
-        title: "autumn collection",
-        desc: "don't comparise on style! get flat 30% off for new arrives.",
-        bg: "f5faf4"
-    }
-]
+      id: 3,
+      img: "https://i.ibb.co/cXFnLLV/3.png",
+      title: "LOUNGEWEAR LOVE",
+      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      bg: "fbf0f4",
+    },
+  ];
 
-export const categories = [
+  export const categories = [
     {
       id: 1,
       img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
